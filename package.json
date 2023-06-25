@@ -1,0 +1,24 @@
+{
+  "name": "discordjs-template",
+  "version": "0.1.0",
+  "description": "A Discord.js template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Omi036/discordjs-template.git"
+  },
+  "keywords": [
+    "discord",
+    "discordjs",
+    "node"
+  ],
+  "author": "Omi036",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Omi036/discordjs-template/issues"
+  },
+  "homepage": "https://github.com/Omi036/discordjs-template#readme"
+}
