@@ -4,7 +4,9 @@
   "description": "A Discord.js template",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prestart":"node slashCommandsRegister.js",
+    "start": "node index.js",
+    "setup":"npm install && echo '{\n\t\"token\":\"\",\n\t\"clientId\":\"\"\n}' > config.json && echo '\nEverything should be installed correctly! To continue, fill up the config.json file'"
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/Omi036/discordjs-template/issues"
   },
-  "homepage": "https://github.com/Omi036/discordjs-template#readme"
+  "homepage": "https://github.com/Omi036/discordjs-template#readme",
+  "dependencies": {
+    "discord.js": "^14.11.0"
+  }
 }
