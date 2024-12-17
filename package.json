@@ -4,9 +4,9 @@
   "description": "A Discord.js template",
   "main": "index.js",
   "scripts": {
-    "prestart":"node slashCommandsRegister.js",
+    "prestart": "node slashCommandsRegister.js",
     "start": "node index.js",
-    "setup":"npm install && echo '{\n\t\"token\":\"\",\n\t\"clientId\":\"\"\n}' > config.json && echo '\nEverything should be installed correctly! To continue, fill up the config.json file'"
+    "setup": "npm install && echo '{\n\t\"token\":\"\",\n\t\"clientId\":\"\"\n}' > config.json && echo '\nEverything should be installed correctly! To continue, fill up the config.json file'"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/Omi036/discordjs-template#readme",
   "dependencies": {
-    "discord.js": "^14.11.0"
+    "discord.js": "^14.11.0",
+    "dotenv": "^16.4.7"
   }
 }

@@ -1,7 +1,9 @@
-const { Client, Collection, Events, GatewayIntentBits } = require('discord.js');
-const { token } = require('./config.json');
+const { Client, Collection, GatewayIntentBits } = require('discord.js');
+require("dotenv").config()
 const fs = require('node:fs');
 const path = require('node:path');
+
+const TOKEN = process.env.DISCORD_TOKEN
 
 // Creates the client
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
@@ -26,13 +28,13 @@ for (const folder of commandFolders) {
 }
 
 // Triggers on bot ready
-client.once(Events.ClientReady, () => {
+client.once("ready", () => {
     console.log("[INFO] Client is alive!")
 })
 
 
 // Triggers when a slashcommand is made
-client.on(Events.InteractionCreate, async interaction => {
+client.on("interactionCreate", async interaction => {
     if (!interaction.isChatInputCommand()) return;
 
     // Gets the command
@@ -57,4 +59,4 @@ client.on(Events.InteractionCreate, async interaction => {
 	}
 })
 
-client.login(token)
+client.login(TOKEN)

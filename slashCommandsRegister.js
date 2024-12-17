@@ -1,8 +1,13 @@
 const { REST, Routes } = require('discord.js');
-const { clientId, token } = require('./config.json');
+require("dotenv").config()
 const fs = require('node:fs');
 const path = require('node:path');
-const rest = new REST().setToken(token);
+
+const CLIENT_ID = process.env.CLIENT_ID
+const TOKEN = process.env.DISCORD_TOKEN
+
+const rest = new REST().setToken(TOKEN);
+
 
 // Gets all the categories inside "./commands/"
 const commands = [];
@@ -35,7 +40,7 @@ for (const folder of commandFolders) {
 		console.log(`[INFO] Started refreshing ${commands.length} application (/) commands.`);
 
 		const data = await rest.put(
-			Routes.applicationCommands(clientId),
+			Routes.applicationCommands(CLIENT_ID),
 			{ body: commands },
 		);
 
